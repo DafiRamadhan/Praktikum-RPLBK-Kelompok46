@@ -13,7 +13,13 @@ function timer() {
         }
     }, 1000);
     
-   
+    const button = document.querySelector('button');
+
+    button.addEventListener('click', event => {
+        setTimeout( () => console.log(context.berhenti),1500);
+        clearInterval(context.interval);
+    });
+
 }
 timer();
 
